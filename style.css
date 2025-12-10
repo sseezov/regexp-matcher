@@ -1,0 +1,104 @@
+/* Базовые стили для формы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.regexpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Стили для лейблов */
+.regexpForm label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+    display: block;
+}
+
+/* Стили для текстового поля */
+#regexpInput {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#regexpInput:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Стили для текстовой области */
+#textInput {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s ease;
+    min-height: 150px;
+    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#textInput:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Стили для кнопки */
+button[type="submit"] {
+    padding: 14px 25px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+    background-color: #357ae8;
+}
+
+button[type="submit"]:active {
+    background-color: #2d6bc2;
+    transform: translateY(1px);
+}
+
+/* Убираем стандартные браузерные стили */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.result {
+  display: flex;
+}
+
+.match{
+  background-color: #2d6bc2;
+}
