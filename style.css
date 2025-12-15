@@ -59,6 +59,11 @@ body {
     resize: vertical;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+}
+
+#textInput > * {
+    margin: 0;
 }
 
 #textInput:focus {
@@ -101,4 +106,5 @@ input:focus, textarea:focus {
 
 .match{
   background-color: #2d6bc2;
+  max-height: 22px;
 }

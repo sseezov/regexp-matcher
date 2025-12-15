@@ -6,7 +6,8 @@ const result = document.querySelector('.result')
 regexpForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const regexp = new RegExp(regexpInput.value, 'g');
-  const input = textInput.value
+  const input = textInput.textContent
+  console.log(input);
   const match = input.match(regexp);
   const newInputElements = input.split('').map((symbol) => {
     if (match.includes(symbol)){
@@ -15,5 +16,9 @@ regexpForm.addEventListener('submit', (e) => {
     return `<p>${symbol}</p>`;
   }).join('')
 
-  result.innerHTML = newInputElements;
+  textInput.innerHTML = newInputElements;
+})
+
+textInput.addEventListener('focus', ()=>{
+  textInput.textContent = ''
 })
