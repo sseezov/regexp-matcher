@@ -62,13 +62,24 @@ body {
     display: flex;
 }
 
-#textInput > * {
+#textInput>* {
     margin: 0;
 }
 
 #textInput:focus {
     outline: none;
     border-color: #4a90e2;
+}
+
+[contenteditable]:empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+[contenteditable]:empty:focus::before {
+    content: "";
 }
 
 /* Стили для кнопки */
@@ -96,15 +107,16 @@ button[type="submit"]:active {
 }
 
 /* Убираем стандартные браузерные стили */
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
 .result {
-  display: flex;
+    display: flex;
 }
 
-.match{
-  background-color: #2d6bc2;
-  max-height: 22px;
+.match {
+    background-color: #2d6bc2;
+    max-height: 22px;
 }

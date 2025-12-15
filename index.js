@@ -18,7 +18,3 @@ regexpForm.addEventListener('submit', (e) => {
 
   textInput.innerHTML = newInputElements;
 })
-
-textInput.addEventListener('focus', ()=>{
-  textInput.textContent = ''
-})
